@@ -1,0 +1,22 @@
+{
+  "name": "monacoswashbucklesample",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "bundle": "esbuild ./index.js --bundle --outfile=./wwwroot/bundle.js --minify --sourcemap --target=chrome80",
+    "postbundle": "cpx ./node_modules/swagger-ui/dist/swagger-ui.css ./wwwroot"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "cpx": "^1.5.0",
+    "esbuild": "^0.20.2"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@monaco-editor/loader": "^1.4.0",
+    "swagger-ui": "^5.15.0",
+    "swagger-ui-dist": "^5.15.0"
+  }
+}
